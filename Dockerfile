@@ -1,8 +1,8 @@
 FROM alpine:3 as alpine
 
-ARG RELEASE_VERSION=latest
+ARG RELEASE_VERSION=v5.18.4
 
-RUN apk add --update-cache curl tar docker
+RUN apk add --update-cache curl tar docker git
 
 RUN curl -L -o /bin/kubectl https://storage.googleapis.com/kubernetes-release/release/v1.17.3/bin/linux/amd64/kubectl \
  && chmod +x /bin/kubectl
